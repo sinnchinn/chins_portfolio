@@ -59,7 +59,7 @@ const ProjectsPage: React.FC = () => {
 
       <motion.div
         className='grid grid-cols-3 m-5 p-20 border-8 border-double rounded-lg border-navPink'>
-<div id="aboutMe" className="col-span-2">
+<div className="col-span-2">
           <p className='text-7xl font-semibold'> Hey there! I'm Sinatha.</p>
           <h1 style={{
             textShadow: "1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black",
@@ -110,7 +110,7 @@ const ProjectsPage: React.FC = () => {
         </div>
       </motion.div>
 
-      <div id="projects" className=' p-20 border-8 border-double border-greenTxt m-5 rounded-lg z-50'>
+      <div  className=' p-20 border-8 border-double border-greenTxt m-5 rounded-lg z-50'>
         <p className='text-5xl font-semibold pb-5'> Projects: </p>
 
         <div className='flex justify-center flex-wrap z-50'>
@@ -171,7 +171,7 @@ const ProjectsPage: React.FC = () => {
       </div>
 
       <div style={{ zIndex: 10 }} className='pb-5'>
-        <div id="getConnected" className=' p-20 border-8 border-double border-navPink ml-5 mr-5 rounded-lg'>
+        <div className=' p-20 border-8 border-double border-navPink ml-5 mr-5 rounded-lg'>
           <p className='text-5xl font-semibold pb-5'> Get Connected: </p>
 
           <div className='grid grid-cols-2'>
