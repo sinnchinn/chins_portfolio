@@ -74,27 +74,27 @@ const ProjectsPage: React.FC = () => {
             <div className='col-span-1'>
               <p className='text-xl'> Languages: </p>
               <div className='inline-flex pt-1'>
-                <img className='w-10 h-8 mr-1' src='/html.png' />
-                <img className='w-9 h-8 mr-1' src='/js.png' />
-                <img className='w-8 h-8 mr-1' src='/ts.png' />
-                <img className='w-8 h-8' src='/c.png' />
+                <img alt='' className='w-10 h-8 mr-1' src='/html.png' />
+                <img alt='' className='w-9 h-8 mr-1' src='/js.png' />
+                <img alt='' className='w-8 h-8 mr-1' src='/ts.png' />
+                <img alt='' className='w-8 h-8' src='/c.png' />
               </div>
             </div>
 
             <div className='col-span-'>
               <p className='text-xl'>Libraries: </p>
               <div className='pt-1 inline-flex'>
-                <img className='w-10 h-8 mr-1' src='/react.png' />
-                <img className='w-10 h-8 mr-1' src='/flowbite.png' />
-                <img className='w-10 h-8' src='/material.png' />
+                <img alt=''  className='w-10 h-8 mr-1' src='/react.png' />
+                <img alt=''  className='w-10 h-8 mr-1' src='/flowbite.png' />
+                <img alt=''  className='w-10 h-8' src='/material.png' />
               </div>
             </div>
 
             <div className='col-span-1'>
               <p className='text-xl'>Frameworks: </p>
               <div className='inline-flex pt-1'>
-                <img className='w-8 h-8 mr-1' src='/bs.png' />
-                <img className='w-11 h-7' src='/tw.png' />
+                <img  alt='' className='w-8 h-8 mr-1' src='/bs.png' />
+                <img alt=''  className='w-11 h-7' src='/tw.png' />
 
               </div>
             </div>
@@ -103,7 +103,7 @@ const ProjectsPage: React.FC = () => {
         </div>
 
         <div className='col-span-1'>
-          <motion.img className='rounded-full border-navPink border-8 h-96 w-96 object-cover'
+          <motion.img  alt=''  className='rounded-full border-navPink border-8 h-96 w-96 object-cover'
             animate={{ borderColor: 'rgb(153,204,153)' }}
             transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
             src='/headshot.jpg' />
@@ -124,7 +124,7 @@ const ProjectsPage: React.FC = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <img src={item.src} alt={`Image ${item.src}`} className="w-full h-auto mb-2 rounded-lg" />
+              <img  src={item.src} alt={`Image ${item.src}`} className="w-full h-auto mb-2 rounded-lg" />
               <p className="text-3xl font-semibold text-center">{item.title}</p>
             </motion.div>
           ))}
@@ -145,7 +145,7 @@ const ProjectsPage: React.FC = () => {
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
                 >
-                  <img src={selectedItem.src} alt={`Image ${selectedItem.src}`} className="w-full object-top h-96 object-cover mb-2 rounded-lg" />
+                  <img  src={selectedItem.src} alt={`Image ${selectedItem.src}`} className="w-full object-top h-96 object-cover mb-2 rounded-lg" />
                   <p className="text-lg p-5">{selectedItem.content}</p>
                   <div className='px-5 grid grid-cols-2'>
                     <div>
