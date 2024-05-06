@@ -1,6 +1,7 @@
 "use client"
 import { Navbar, Button } from 'flowbite-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const ProjectsPage: React.FC = () => {
@@ -74,27 +75,27 @@ const ProjectsPage: React.FC = () => {
             <div className='col-span-1'>
               <p className='text-xl'> Languages: </p>
               <div className='inline-flex pt-1'>
-                <img alt='' className='w-10 h-8 mr-1' src='/html.png' />
-                <img alt='' className='w-9 h-8 mr-1' src='/js.png' />
-                <img alt='' className='w-8 h-8 mr-1' src='/ts.png' />
-                <img alt='' className='w-8 h-8' src='/c.png' />
+                <Image alt='' className='w-10 h-8 mr-1' src='/html.png' />
+                <Image alt='' className='w-9 h-8 mr-1' src='/js.png' />
+                <Image alt='' className='w-8 h-8 mr-1' src='/ts.png' />
+                <Image alt='' className='w-8 h-8' src='/c.png' />
               </div>
             </div>
 
             <div className='col-span-'>
               <p className='text-xl'>Libraries: </p>
               <div className='pt-1 inline-flex'>
-                <img alt=''  className='w-10 h-8 mr-1' src='/react.png' />
-                <img alt=''  className='w-10 h-8 mr-1' src='/flowbite.png' />
-                <img alt=''  className='w-10 h-8' src='/material.png' />
+                <Image alt=''  className='w-10 h-8 mr-1' src='/react.png' />
+                <Image alt=''  className='w-10 h-8 mr-1' src='/flowbite.png' />
+                <Image alt=''  className='w-10 h-8' src='/material.png' />
               </div>
             </div>
 
             <div className='col-span-1'>
               <p className='text-xl'>Frameworks: </p>
               <div className='inline-flex pt-1'>
-                <img  alt='' className='w-8 h-8 mr-1' src='/bs.png' />
-                <img alt=''  className='w-11 h-7' src='/tw.png' />
+                <Image  alt='' className='w-8 h-8 mr-1' src='/bs.png' />
+                <Image alt=''  className='w-11 h-7' src='/tw.png' />
 
               </div>
             </div>
@@ -124,7 +125,7 @@ const ProjectsPage: React.FC = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <img  src={item.src} alt={`Image ${item.src}`} className="w-full h-auto mb-2 rounded-lg" />
+              <Image  src={item.src} alt={`Image ${item.src}`} className="w-full h-auto mb-2 rounded-lg" />
               <p className="text-3xl font-semibold text-center">{item.title}</p>
             </motion.div>
           ))}
@@ -145,13 +146,13 @@ const ProjectsPage: React.FC = () => {
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
                 >
-                  <img  src={selectedItem.src} alt={`Image ${selectedItem.src}`} className="w-full object-top h-96 object-cover mb-2 rounded-lg" />
+                  <Image  src={selectedItem.src} alt={`Image ${selectedItem.src}`} className="w-full object-top h-96 object-cover mb-2 rounded-lg" />
                   <p className="text-lg p-5">{selectedItem.content}</p>
                   <div className='px-5 grid grid-cols-2'>
                     <div>
                       <p className='pb-1 text-lg font-semibold'>Built With:</p>
                       {selectedItem.icons.map((icon, iconIndex) => (
-                        <img key={iconIndex} src={icon} alt={`Icon ${iconIndex}`} className="w-10 inline-flex h-10 mr-5" />
+                        <Image key={iconIndex} src={icon} alt={`Icon ${iconIndex}`} className="w-10 inline-flex h-10 mr-5" />
                       ))}
                     </div>
                     <div className='flex justify-center'>
@@ -212,7 +213,7 @@ const ProjectsPage: React.FC = () => {
               {isResumeOpen && (
                 <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50">
                   <div className=" w-2/6 bg-white border-navPink border-8 p-8 rounded-lg shadow-lg">
-                    <img src={'/resume.png'} alt="Resume" className="w-6/6 object-top object-cover mb-2 rounded-lg " />
+                    <Image src={'/resume.png'} alt="Resume" className="w-6/6 object-top object-cover mb-2 rounded-lg " />
                     {/* Add any additional content for the resume card */}
                     <button className="px-5 mt-5 hover:underline" onClick={closeResume}>Close</button>
                   </div>
