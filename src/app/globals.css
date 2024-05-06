@@ -24,3 +24,25 @@
 .custom-bounce {
   animation: customBounce 4s infinite;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.tab:focus {
+  color: black !important; 
+  outline: none !important;
+  
+}
+
+.tab.active:focus {
+  background-color: rgb(153,204,153) !important; 
+  outline: none !important;
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
