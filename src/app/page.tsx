@@ -195,7 +195,7 @@ const ProjectsPage: React.FC = () => {
 
             </div>
             <div className='col-span-1'>
-              <p className='text-lg'>This is a Studio Ghibli trivia game with easy, medium and hard modes. This poject was the one that made me want to quit the academy all together but I pushed through and was able to get it to work with the help of my TA's. Unity was extremely tough for me especially since we learned this at the beginning of the academy, a time where I barely knew how to code. Although I almost quit because of Unity, looking back I actually did enjoy our little time with it. I like seeing my games/creations in this format.  </p>
+              <p className='text-lg'>This is a Studio Ghibli trivia game with easy, medium and hard modes. This poject was the one that made me want to quit the academy all together but I pushed through and was able to get it to work with the help of my TAs. Unity was extremely tough for me especially since we learned this at the beginning of the academy, a time where I barely knew how to code. Although I almost quit because of Unity, looking back I actually did enjoy our little time with it. I like seeing my games/creations in this format.  </p>
 
               <p className='text-lg font-semibold pt-5'>Tip!!</p>
               <p className='text-lg'> Go to options menu to play music throughout the game for a nice setting.</p>
