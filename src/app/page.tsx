@@ -8,6 +8,19 @@ const ProjectsPage: React.FC = () => {
   type ItemType = { title: string; src: string; content: string, icons: string[], button: string, href: string };
 
   const [selectedItem, setSelectedItem] = useState<ItemType | null>(null);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [resumeUrl, setResumeUrl] = useState('/resume.png');
+
+  // Function to open the resume picture card
+  const openResume = (url: string) => {
+    setResumeUrl(url);
+    setIsResumeOpen(true);
+  };
+
+  // Function to close the resume picture card
+  const closeResume = () => {
+    setIsResumeOpen(false);
+  };
 
   const handleClick = (item: ItemType) => {
     setSelectedItem(item);
@@ -97,10 +110,10 @@ const ProjectsPage: React.FC = () => {
         </div>
       </motion.div>
 
-      <div id='projects' className=' p-20 border-8 border-double border-greenTxt m-5 rounded-lg'>
+      <div id='projects' className=' p-20 border-8 border-double border-greenTxt m-5 rounded-lg z-50'>
         <p className='text-5xl font-semibold pb-5'> Projects: </p>
 
-        <div className='flex justify-center flex-wrap'>
+        <div className='flex justify-center flex-wrap z-50'>
           {/* Render your items with cards */}
           {/* Render your items with cards */}
           {items.map((item, index) => (
@@ -121,7 +134,7 @@ const ProjectsPage: React.FC = () => {
             {selectedItem !== null && (
               <motion.div
                 key="modal"
-                className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50"
+                className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-50"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -157,7 +170,7 @@ const ProjectsPage: React.FC = () => {
         </div>
       </div>
 
-      <div style={{ zIndex: 10 }}  className='pb-5'>
+      <div style={{ zIndex: 10 }} className='pb-5'>
         <div id='getConnected' className=' p-20 border-8 border-double border-navPink ml-5 mr-5 rounded-lg'>
           <p className='text-5xl font-semibold pb-5'> Get Connected: </p>
 
@@ -169,22 +182,42 @@ const ProjectsPage: React.FC = () => {
               <p>(209) 670-6105</p>
             </div>
 
-            <div  className='col-span-1 flex justify-center items-center'>
+            <div className='col-span-1 flex justify-center items-center'>
+
+
               <div className='px-5'>
-                <a href='www.linkedin.com/in/sinatha-chin-123331308' target='_blank' rel='noopener noreferrer'>
-                  <Button className='px-5 text-black bg-greenTxt hover:underline enabled:hover:bg-greenTxt relative'>
+                <a href='https://www.linkedin.com/in/sinatha-chin-123331308' target='_blank' rel='noopener noreferrer'>
+                  <Button className='px-5 text-black bg-greenTxt hover:underline enabled:hover:bg-greenTxt relative focus:ring-0'>
                     LinkedIn
                   </Button>
                 </a>
               </div>
 
-              <div style={{ zIndex: 10 }} className='px-5'>
+              <div className='px-5'>
                 <a href='https://github.com/sinnchinn' target='_blank' rel='noopener noreferrer'>
-                  <Button className='px-5 text-black bg-greenTxt hover:underline enabled:hover:bg-greenTxt'>
+                  <Button className='px-5 text-black bg-greenTxt hover:underline enabled:hover:bg-greenTxt focus:ring-0'>
                     Github
                   </Button>
                 </a>
               </div>
+
+              <div className='px-5'>
+                <a rel='noopener noreferrer'>
+                  <Button onClick={() => openResume('/resume.png')} className='px-5 text-black bg-greenTxt hover:underline enabled:hover:bg-greenTxt focus:ring-0'>
+                    Resume
+                  </Button>
+                </a>
+              </div>
+
+              {isResumeOpen && (
+                <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50">
+                  <div className=" w-2/6 bg-white border-navPink border-8 p-8 rounded-lg shadow-lg">
+                    <img src={'/resume.png'} alt="Resume" className="w-6/6 object-top object-cover mb-2 rounded-lg " />
+                    {/* Add any additional content for the resume card */}
+                    <button className="px-5 mt-5 hover:underline" onClick={closeResume}>Close</button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
