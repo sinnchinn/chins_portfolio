@@ -94,6 +94,13 @@ const ProjectsPage: React.FC = () => {
 
           <div className={pageSize ? 'grid grid-cols-3 pt-10 font-bold' : 'hidden'}>
 
+          <div className='col-span-'>
+              <p className='text-xl'>Libraries: </p>
+              <div className='pt-1 inline-flex'>
+                <Image height={100} width={100} alt='' className='w-10 h-8 mr-1' src='/react.png' />
+              </div>
+            </div>
+
             <div className='col-span-1'>
               <p className='text-xl'> Languages: </p>
               <div className='inline-flex pt-1'>
@@ -104,20 +111,15 @@ const ProjectsPage: React.FC = () => {
               </div>
             </div>
 
-            <div className='col-span-'>
-              <p className='text-xl'>Libraries: </p>
-              <div className='pt-1 inline-flex'>
-                <Image height={100} width={100} alt='' className='w-10 h-8 mr-1' src='/react.png' />
-                <Image height={100} width={100} alt='' className='w-10 h-8 mr-1' src='/flowbite.png' />
-                <Image height={100} width={100} alt='' className='w-10 h-8' src='/material.png' />
-              </div>
-            </div>
+            
 
             <div className='col-span-1'>
               <p className='text-xl'>Frameworks: </p>
               <div className='inline-flex pt-1'>
                 <Image height={100} width={100} alt='' className='w-8 h-8 mr-1' src='/bs.png' />
                 <Image height={100} width={100} alt='' className='w-11 h-7' src='/tw.png' />
+                <Image height={100} width={100} alt='' className='w-10 h-8 mr-1' src='/flowbite.png' />
+                <Image height={100} width={100} alt='' className='w-10 h-8' src='/material.png' />
 
               </div>
             </div>
