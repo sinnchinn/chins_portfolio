@@ -46,3 +46,11 @@ select:focus,
 textarea:focus {
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+}
